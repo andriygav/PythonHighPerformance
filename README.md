@@ -28,12 +28,14 @@ def CythonTypedFunc(int N):
         ret += n
     return ret
 ```
+### Вычислительный эксперимент
+Для сравнения рассматривается $N = 10000000$ для всех моделей, а также каждая функция вызывается $200$ раз для усреднения результата.
 ### Результаты
 | Функция  | Время |
 | ------------- | ------------- |
-| Python Func  | 619 ms  |
-| Cython Func  | 439 ms  |
-| Cython Typed Func  | 0.172 ms |
+| Func  | 619 ms  |
+| CythonFunc  | 439 ms  |
+| CythonTypedFunc  | 0.172 ms |
 
 ## Список источников
 * Kurt W. Smith. Cython: A Guide for Python Programmers. Sebastopol: O’Reilly, 2015.
