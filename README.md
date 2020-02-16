@@ -37,6 +37,7 @@ def CythonTypedFunc(int N):
 | Func  | 619 ms  |
 | CythonFunc  | 439 ms  |
 | CythonTypedFunc  | 0.172 ms |
+
 Весь код доступен по [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/SimpleExample.ipynb)
 
 ## Список источников
