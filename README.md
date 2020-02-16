@@ -46,13 +46,13 @@ def CythonTypedFunc(int N):
 | CythonFunc  | 439 ms  |
 | CythonTypedFunc  | 0.172 ms |
 
-Весь код доступен по [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/SimpleExample.ipynb).
+Весь код доступен по [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/SimpleExample.ipynb) и [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/SimpleExamplePypy.ipynb).
 
 ## Пример на основе CountVectorizer с пакета sklearn
 ### Описание функций для иследования
 В данном пункте сравним скорости работы простого векторного представления предложений. В качестве базового решения выбран ```CountVectorizer``` из пакета ```sklearn```.
 
-На основе ```CountVectorizer``` был написан сообвественый класс ```Vectorizer``` на python. Данный класс повторяет базовые возможности класса ```CountVectorizer```, такие как ```fit``` и ```transform```. Код доступен по [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/CountVectorizer.ipynb).
+На основе ```CountVectorizer``` был написан сообвественый класс ```Vectorizer``` на python. Данный класс повторяет базовые возможности класса ```CountVectorizer```, такие как ```fit``` и ```transform```. Код доступен по [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/CountVectorizer.ipynb) и [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/CountVectorizerPypy.ipynb).
 
 Сревнение производительности проводится для класса ```Vectorizer``` который работает в следующих случаях:
 * ```Vectorizer()``` --- простая реалзиция на python без компиляции;
@@ -69,6 +69,7 @@ def CythonTypedFunc(int N):
 | ------------- | ------------- | ------------- |
 | CountVectorizer  | 1393 ms  | 2538 ms |
 | Vectorizer  | 633 ms | 2121 ms |
+| VectorizerPypy  | 372 ms | 3140 ms |
 | CythonVectorizer  | 579 ms | 1964 ms |
 | CythonTypedVectorizer  | 545 ms | 1955 ms |
 
