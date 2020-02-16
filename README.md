@@ -55,6 +55,7 @@ def CythonTypedFunc(int N):
 На основе ```CountVectorizer``` был написан сообвественый класс ```Vectorizer``` на python. Данный класс повторяет базовые возможности класса ```CountVectorizer```, такие как ```fit``` и ```transform```. Код доступен по [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/CountVectorizer.ipynb) и [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/CountVectorizerPypy.ipynb).
 
 Сревнение производительности проводится для класса ```Vectorizer``` который работает в следующих случаях:
+* ```VectorizerPyp()``` --- простая реализация на pypy3;
 * ```Vectorizer()``` --- простая реалзиция на python без компиляции;
 * ```CythonVectorizer()``` --- простая компиляция класса без использования типизации;
 * ```CythonTypedVectorizer()``` --- компиляция класса ```Vectorizer``` с использованием типизации данных.
