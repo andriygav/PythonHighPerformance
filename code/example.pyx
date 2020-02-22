@@ -41,6 +41,7 @@ cdef class regex_cpp:
             strncpy(substring, stringbytes+current_str_pos+regmatch_obj[0].rm_so, regmatch_obj[0].rm_eo-regmatch_obj[0].rm_so)
             
             results.push_back(<string> substring)
+            free(substring)
             
             current_str_pos += regmatch_obj[0].rm_eo
             regex_res = regexec(&self.regex_obj, stringbytes + current_str_pos, 1, regmatch_obj, 0)
@@ -57,6 +58,7 @@ cpdef set[string] vectorize(str patern, list STRINGS):
     cdef vector[char*] cpp_words = [word.encode('utf-8') for word in STRINGS]
     
     reg = regex_cpp(PAT)
+    free(PAT)
     
     cdef long i = 0
     cdef long length = cpp_words.size()
@@ -72,7 +74,7 @@ cpdef set[string] vectorize(str patern, list STRINGS):
     
     return answers
 
-cpdef set[string] vectorize_para(str patern, list STRINGS):
+cpdef set[string] vectorize_para(str patern, list STRINGS, long num_threads):
     cdef vector[string] results
     cdef char* PAT = <char *> malloc((len(patern)+1) * sizeof(char))
     PAT[len(patern)] = 0
@@ -82,6 +84,7 @@ cpdef set[string] vectorize_para(str patern, list STRINGS):
     cdef vector[char*] cpp_words = [word.encode('utf-8') for word in STRINGS]
     
     reg = regex_cpp(PAT)
+    free(PAT)
     
     cdef long i = 0
     cdef long length = cpp_words.size()
@@ -89,8 +92,8 @@ cpdef set[string] vectorize_para(str patern, list STRINGS):
     cdef set[string] answers
     cdef long j = 0
 
-    with nogil, parallel(num_threads=4):
-        for i in prange(length, schedule='static', chunksize=100):
+    with nogil, parallel(num_threads=num_threads):
+        for i in prange(length, schedule='static', chunksize=1):
             results = reg.findall(cpp_words[i])
             for j in prange(results.size()):
                 answers.insert(results[j])
