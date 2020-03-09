@@ -62,9 +62,9 @@
 
 Как видно из синтетического примера данный компилятор работает очень хорошо когда типы в функциях являются строго фиксируемыми. Как видно из результатов в базовом примере, ***JIT*** компилятор ***PyPy*** выполняет детский пример намного быстрее, чем после компиляции при помощи ***cython***. Но после добавления типизации ***cython*** версия все равно оказалась намного быстрее.
 
-Также весь исходный код доступен по [ссылке1](https://github.com/andriygav/pythonHighPerformance/tree/master/example/CountVectorizer/Cython), [ссылке1](https://github.com/andriygav/pythonHighPerformance/tree/master/example/SimpleExample/Cython). Данный код легко собирается выполнив команду:
+Также весь исходный код доступен по [ссылке](https://github.com/andriygav/pythonHighPerformance/tree/master/example/CountVectorizer/Cython), [ссылке](https://github.com/andriygav/pythonHighPerformance/tree/master/example/SimpleExample/Cython). Данный код легко собирается выполнив команду:
 ```
-
+python setup.py build_ext --inplace
 ```
 
 ### Об OpenMP в Cython
@@ -77,6 +77,10 @@
 
 ### Об Nuitka
 
+Также весь исходный код доступен по [ссылке](https://github.com/andriygav/pythonHighPerformance/tree/master/example/CountVectorizer/Nuitka), [ссылке](https://github.com/andriygav/pythonHighPerformance/tree/master/example/SimpleExample/Nuitka). Данный код легко собирается выполнив команду:
+```
+python -m nuitka --module FileName.py --include-package=api --follow-import-to=FileName --show-modules --remove-output --output-dir=FileNamePack
+```
 
 
 ## Список источников
