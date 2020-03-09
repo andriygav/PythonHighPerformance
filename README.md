@@ -79,7 +79,13 @@ python setup.py build_ext --inplace
 
 Также весь исходный код доступен по [ссылке](https://github.com/andriygav/pythonHighPerformance/tree/master/example/CountVectorizer/Nuitka), [ссылке](https://github.com/andriygav/pythonHighPerformance/tree/master/example/SimpleExample/Nuitka). Данный код легко собирается выполнив команду:
 ```
-python -m nuitka --module FileName.py --include-package=api --follow-import-to=FileName --show-modules --remove-output --output-dir=FileNamePack
+python -m nuitka\
+  --module FileName.py\
+  --include-package=FileName\
+  --follow-import-to=FileName\
+  --show-modules\
+  --remove-output\
+  --output-dir=FileNamePack
 ```
 
 
