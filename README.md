@@ -56,3 +56,4 @@
 
 ## Список источников
 * Kurt W. Smith. Cython: A Guide for Python Programmers. Sebastopol: O’Reilly, 2015.
+* Gorelick M., Ozsvald I. Hight Performance Python. Sebastopol: O’Reilly, 2014.
