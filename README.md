@@ -22,8 +22,8 @@
 | PyPyFunc  | 130 ms  |
 | NumbaFunc  | 0.2 ms  |
 | CythonFunc  | 3335 ms  |
-| CythonTypedFunc  | 0.032 ms  |
-| CythonOpenMPFunc  | 0.010 ms  |
+| CythonTypedFunc  | 32 ms  |
+| CythonOpenMPFunc  | 10 ms  |
 | NuitkaFunc  | 4035 ms  |
 
 Весь код доступен по [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/SimpleExample.ipynb) и [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/SimpleExamplePypy.ipynb).
