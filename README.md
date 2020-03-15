@@ -18,13 +18,13 @@
 В данном простом примере получили следующие оценки времени работы функций:
 | Функция  | Время |
 | ------------- | ------------- |
-| PythonFunc  | 4515 ms  |
+| PythonFunc  | 4421±42 ms  |
 | PyPyFunc  | 130 ms  |
-| NumbaFunc  | 0.2 ms  |
-| CythonFunc  | 3335 ms  |
-| CythonTypedFunc  | 32 ms  |
-| CythonOpenMPFunc  | 10 ms  |
-| NuitkaFunc  | 4035 ms  |
+| NumbaFunc  | 0.002±0.001 ms  |
+| CythonFunc  | 3191±69 ms  |
+| CythonTypedFunc  | 31±1 ms  |
+| CythonOpenMPFunc  | 10±3 ms  |
+| NuitkaFunc  | 4161±79 ms  |
 
 Весь код доступен по [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/SimpleExample.ipynb) и [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/SimpleExamplePypy.ipynb).
 
