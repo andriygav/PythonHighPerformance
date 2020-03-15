@@ -51,11 +51,11 @@
 
 | Функция  | Время ```fit``` | Время ```transform``` |
 | ------------- | ------------- | ------------- |
-| Vectorizer  | 492 ms | 1602 ms |
+| Vectorizer  | 487±12 ms | 1606±12 ms |
 | PyPyVectorizer  | 376 ms | 3167 ms |
-| CythonVectorizer  | 456 ms | 1513 ms |
-| CythonTypedVectorizer  | 441 ms | 1510 ms |
-| NuitkaVectorizer  | 572 ms | 1597 ms |
+| CythonVectorizer  | 465±11 ms | 1500±12 ms |
+| CythonTypedVectorizer  | 409±8 ms | 1465±12 ms |
+| NuitkaVectorizer  | 554±23 ms | 1553±42 ms |
 
 
 ## Общие замечания и выводы
