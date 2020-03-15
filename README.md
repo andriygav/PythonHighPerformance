@@ -19,7 +19,7 @@
 | Функция  | Время |
 | ------------- | ------------- |
 | PythonFunc  | 4421±42 ms  |
-| PyPyFunc  | 130 ms  |
+| PyPyFunc  | 127±3 ms  |
 | NumbaFunc  | 0.002±0.001 ms  |
 | CythonFunc  | 3191±69 ms  |
 | CythonTypedFunc  | 31±1 ms  |
@@ -52,7 +52,7 @@
 | Функция  | Время ```fit``` | Время ```transform``` |
 | ------------- | ------------- | ------------- |
 | Vectorizer  | 487±12 ms | 1606±12 ms |
-| PyPyVectorizer  | 376 ms | 3167 ms |
+| PyPyVectorizer  | 382±24 ms | 3405±80 ms |
 | CythonVectorizer  | 465±11 ms | 1500±12 ms |
 | CythonTypedVectorizer  | 409±8 ms | 1465±12 ms |
 | NuitkaVectorizer  | 554±23 ms | 1553±42 ms |
