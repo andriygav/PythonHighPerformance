@@ -18,13 +18,13 @@
 В данном простом примере получили следующие оценки времени работы функций:
 | Функция  | Время |
 | ------------- | ------------- |
-| PythonFunc  | 4515 ms  |
+| PythonFunc  | 4421±42 ms  |
 | PyPyFunc  | 130 ms  |
-| NumbaFunc  | 0.2 ms  |
-| CythonFunc  | 3335 ms  |
-| CythonTypedFunc  | 32 ms  |
-| CythonOpenMPFunc  | 10 ms  |
-| NuitkaFunc  | 4035 ms  |
+| NumbaFunc  | 0.002±0.001 ms  |
+| CythonFunc  | 3191±69 ms  |
+| CythonTypedFunc  | 31±1 ms  |
+| CythonOpenMPFunc  | 10±3 ms  |
+| NuitkaFunc  | 4161±79 ms  |
 
 Весь код доступен по [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/SimpleExample.ipynb) и [ссылке](https://github.com/andriygav/cythonExample/blob/master/example/SimpleExamplePypy.ipynb).
 
@@ -51,11 +51,11 @@
 
 | Функция  | Время ```fit``` | Время ```transform``` |
 | ------------- | ------------- | ------------- |
-| Vectorizer  | 492 ms | 1602 ms |
+| Vectorizer  | 487±12 ms | 1606±12 ms |
 | PyPyVectorizer  | 376 ms | 3167 ms |
-| CythonVectorizer  | 456 ms | 1513 ms |
-| CythonTypedVectorizer  | 441 ms | 1510 ms |
-| NuitkaVectorizer  | 572 ms | 1597 ms |
+| CythonVectorizer  | 465±11 ms | 1500±12 ms |
+| CythonTypedVectorizer  | 409±8 ms | 1465±12 ms |
+| NuitkaVectorizer  | 554±23 ms | 1553±42 ms |
 
 
 ## Общие замечания и выводы
